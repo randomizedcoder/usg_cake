@@ -1,0 +1,35 @@
+root@GatewayPro:~# tc qdisc show
+qdisc noqueue 0: dev lo root refcnt 2
+qdisc mq 0: dev eth2 root
+qdisc pfifo_fast 0: dev eth2 parent :4 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+qdisc pfifo_fast 0: dev eth2 parent :3 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+qdisc pfifo_fast 0: dev eth2 parent :2 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+qdisc pfifo_fast 0: dev eth2 parent :1 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+qdisc mq 0: dev eth0 root
+qdisc pfifo_fast 0: dev eth0 parent :4 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+qdisc pfifo_fast 0: dev eth0 parent :3 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+qdisc pfifo_fast 0: dev eth0 parent :2 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+qdisc pfifo_fast 0: dev eth0 parent :1 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+qdisc htb 1: dev eth3 root refcnt 5 r2q 10 default 0x2 direct_packets_stat 0 direct_qlen 10000
+qdisc fq_codel 2: dev eth3 parent 1:2 limit 2000p flows 1024 quantum 300 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64
+qdisc ingress ffff: dev eth3 parent ffff:fff1 ----------------
+qdisc mq 0: dev eth1 root
+qdisc pfifo_fast 0: dev eth1 parent :4 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+qdisc pfifo_fast 0: dev eth1 parent :3 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+qdisc pfifo_fast 0: dev eth1 parent :2 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+qdisc pfifo_fast 0: dev eth1 parent :1 bands 3 priomap 1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+qdisc noqueue 0: dev br0 root refcnt 2
+qdisc noqueue 0: dev eth1.40 root refcnt 2
+qdisc noqueue 0: dev eth1.60 root refcnt 2
+qdisc noqueue 0: dev eth1.66 root refcnt 2
+qdisc noqueue 0: dev eth1.70 root refcnt 2
+qdisc noqueue 0: dev eth2.40 root refcnt 2
+qdisc noqueue 0: dev eth2.60 root refcnt 2
+qdisc noqueue 0: dev eth2.66 root refcnt 2
+qdisc noqueue 0: dev eth2.70 root refcnt 2
+qdisc noqueue 0: dev br40 root refcnt 2
+qdisc noqueue 0: dev br60 root refcnt 2
+qdisc noqueue 0: dev br66 root refcnt 2
+qdisc noqueue 0: dev br70 root refcnt 2
+qdisc htb 1: dev ifbeth3 root refcnt 2 r2q 10 default 0x2 direct_packets_stat 0 direct_qlen 1000
+qdisc fq_codel 2: dev ifbeth3 parent 1:2 limit 2000p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64
