@@ -1,0 +1,6 @@
+root@GatewayPro:~# ip route
+172.16.40.0/24 dev br40 proto kernel scope link src 172.16.40.1
+172.16.50.0/24 dev br0 proto kernel scope link src 172.16.50.1
+172.16.60.0/24 dev br60 proto kernel scope link src 172.16.60.1
+172.88.16.0/20 dev eth3 proto kernel scope link src 172.88.24.21
+192.168.66.0/24 dev br66 proto kernel scope link src 192.168.66.1

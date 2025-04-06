@@ -1,0 +1,12 @@
+root@GatewayPro:~# brctl show
+bridge name     bridge id               STP enabled     interfaces
+br0             8000.e43883368f0d       no              eth1
+                                                        eth2
+br40            8000.e43883368f0d       no              eth1.40
+                                                        eth2.40
+br60            8000.e43883368f0d       no              eth1.60
+                                                        eth2.60
+br66            8000.e43883368f0d       no              eth1.66
+                                                        eth2.66
+br70            8000.e43883368f0d       no              eth1.70
+                                                        eth2.70

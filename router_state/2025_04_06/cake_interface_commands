@@ -1,0 +1,24 @@
+tc qdisc del dev eth3 parent 1:2
+tc qdisc add dev eth3 parent 1:2 cake bandwidth 950Mbit rtt 30ms
+tc qdisc del dev ifbeth3 parent 1:2
+tc qdisc add dev ifbeth3 parent 1:2 cake bandwidth 33Mbit rtt 30ms
+tc qdisc del dev eth1 root
+tc qdisc add dev eth1 root cake bandwidth 950Mbit rtt 30ms
+tc qdisc del dev eth2 root
+tc qdisc add dev eth2 root cake bandwidth 950Mbit rtt 30ms
+tc qdisc del dev eth1.40 root
+tc qdisc add dev eth1.40 root cake bandwidth 950Mbit rtt 30ms
+tc qdisc del dev eth2.40 root
+tc qdisc add dev eth2.40 root cake bandwidth 950Mbit rtt 30ms
+tc qdisc del dev eth1.60 root
+tc qdisc add dev eth1.60 root cake bandwidth 950Mbit rtt 30ms
+tc qdisc del dev eth2.60 root
+tc qdisc add dev eth2.60 root cake bandwidth 950Mbit rtt 30ms
+tc qdisc del dev eth1.66 root
+tc qdisc add dev eth1.66 root cake bandwidth 950Mbit rtt 30ms
+tc qdisc del dev eth2.66 root
+tc qdisc add dev eth2.66 root cake bandwidth 950Mbit rtt 30ms
+tc qdisc del dev eth1.70 root
+tc qdisc add dev eth1.70 root cake bandwidth 950Mbit rtt 30ms
+tc qdisc del dev eth2.70 root
+tc qdisc add dev eth2.70 root cake bandwidth 950Mbit rtt 30ms
