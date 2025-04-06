@@ -9,3 +9,6 @@ root@GatewayPro:~# ls /lib/modules/$(uname -r)/kernel/net/sched/sch_cake.ko*
 ls: cannot access '/lib/modules/4.19.152-ui-alpine/kernel/net/sched/sch_cake.ko*': No such file or directory
 root@GatewayPro:~# ls /lib/modules/$(uname -r)/kernel/net/sched/
 act_connmark.ko  act_gact.ko  act_ipt.ko  act_mirred.ko  cls_basic.ko  cls_fw.ko  cls_u32.ko  sch_codel.ko  sch_fq_codel.ko  sch_hfsc.ko  sch_htb.ko  sch_ingress.ko  sch_netem.ko  sch_prio.ko  sch_sfq.ko
+
+root@GatewayPro:~# uname -a
+Linux GatewayPro 4.19.152-ui-alpine #4.19.152 SMP Wed Feb 5 14:47:23 CST 2025 aarch64 GNU/Linux
