@@ -1,2 +1,2 @@
 # usg_cake
-Unifi Security Gateway Cacke
+Unifi Security Gateway Cake
