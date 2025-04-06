@@ -1,0 +1,17 @@
+root@GatewayPro:~# tc -d class show dev eth3
+class htb 1:1 root rate 33Mbit ceil 33Mbit linklayer ethernet burst 1493b/1 mpu 0b cburst 1493b/1 mpu 0b level 7
+class htb 1:2 parent 1:1 leaf 2: prio 7 quantum 1514 rate 64bit ceil 33Mbit linklayer ethernet burst 1500b/1 mpu 0b cburst 1493b/1 mpu 0b level 0
+class fq_codel 2:b0 parent 2:
+class fq_codel 2:107 parent 2:
+class fq_codel 2:10d parent 2:
+class fq_codel 2:11d parent 2:
+class fq_codel 2:137 parent 2:
+class fq_codel 2:29e parent 2:
+class fq_codel 2:2f1 parent 2:
+class fq_codel 2:3a5 parent 2:
+class fq_codel 2:3b5 parent 2:
+root@GatewayPro:~# tc -d class show dev ifbeth3
+class htb 1:1 root rate 950Mbit ceil 950Mbit linklayer ethernet burst 1306b/1 mpu 0b cburst 1306b/1 mpu 0b level 7
+class htb 1:2 parent 1:1 leaf 2: prio 7 quantum 1514 rate 64bit ceil 950Mbit linklayer ethernet burst 1500b/1 mpu 0b cburst 1306b/1 mpu 0b level 0
+class fq_codel 2:108 parent 2:
+class fq_codel 2:400 parent 2:
